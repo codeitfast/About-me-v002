@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <style>
+      body{
+        background-color: #141414;
+        color: white;
+        text-align: center;
+      }
+    </style>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="parallax.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <div id = "welcome">
+    
+      <h1>Hello.<br/>
+    I'm codeitfast.</h1>
+      <a class = "button" href = "#part1"><img src = "images/purple_button.svg" style = "width: 3rem; height: auto;"></a>
+      <br/>
+      <img id = "css" class = "codeImage" src = "images/css_test_v004.svg" style = "height: 30%; width: auto;">
+      <img id = "html" class = "codeImage" src = "images/html_test_v003.svg" style = "height: 31%; width: auto;">
+      <img id = "javascript" class = "codeImage" src = "images/js_test.svg" style = "height: 30%; width: auto;">
+      <img id = "python" class = "codeImage" src = "images/python_test_v002.svg" style = "height: 30%; width: auto;">
+    
+    </div>
+    <hr class = "space">
+    <div style="min-height: 100vh;"></div>
+    <div class = "textBox" id = "part1">
+      <h1 id = "target">I'm a programer.</h1>
+      <h3>Here are some projects I have made.</h3>
+    </div>
+<script src="script.js"></script>
+
+    <script>
+      $('*').each((index, item) => {
+        if(item.hasAttribute('scrollto')) {
+          item.addEventListener('click', e => {
+            let y = $(window).scrollTop();
+            $('html, body').animate({
+              scrollTop: $(item.getAttribute('scrollto')).offset().top
+            }, 2000, "swing");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

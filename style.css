@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+
+html{
+  font-family: 'Baumans', cursive;
+  scroll-behavior: smooth;
+}
+
+body, html{
+  height: 100%;
+}
+
+body{
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  overflow-x: hidden;
+}
+
+.space{
+  background-color: transparent;
+  border-color: transparent;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 1rem;
+}
+
+.textBox{
+  min-height: 50vh;
+  padding: 25vh 0px;
+}
+
+.codeImage{
+  position: absolute;
+  /*
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  */
+  z-index: 1;
+  opacity: 0%;
+}
+
+#python{
+  transform: translate(40%, 30%);
+}
+
+#javascript{
+  transform: translate(-110%, 60%);
+}
+
+#html{
+  transform: translate(40%, 140%);
+}
+
+#css{
+  transform: translate(-110%, 190%);
+}
+
+.show{
+  opacity: 100%;
+  transform: translate(0%, 50px);
+  -webkit-transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+.button{
+  filter: grayscale(1);
+  -webkit-transition: filter 500ms ease-in-out;
+}
+
+.button:hover{
+  filter: grayscale(0);
+  -webkit-transition: filter 500ms ease-in-out;
+}
+
+#welcome{
+  /*background-image: url('better_fire.png');*/
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1366px) {
+  #welcome {
+    background-attachment: scroll;
+  }
+}
+
+#part1{
+  background-image: url('dark_grass.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1366px) {
+  #part1 {
+    background-attachment: scroll;
+  }
+}
