@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
 
+:root{
+  --width: calc(20%);
+}
+
 html{
   font-family: 'Baumans', cursive;
   scroll-behavior: smooth;
@@ -89,7 +93,7 @@ body{
 }
 
 #part1{
-  background-image: url('dark_grass.jpg');
+  background-image: url('images/dark_grass.jpg');
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -104,4 +108,25 @@ body{
 
 .codeImage, h1{
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #8902CC, 0 0 40px #8902CC, 0 0 50px #8902CC, 0 0 60px #5900FF, 0 0 70px #5900FF;
+}
+
+.project{
+  border-radius: 10px;
+  box-shadow: 0 10px 10px 0 #d3d3d3;
+  outline: 0px solid black;
+  -webkit-transition: transform 200ms linear, box-shadow 200ms linear, border-radius 200ms linear, outline 200ms linear;
+}
+
+.project:hover{
+  cursor: pointer;
+  transform: translate(0,10px);
+  box-shadow: 0 0 0 0 #d3d3d3;
+  outline: 3px solid white;
+  border-radius: 5px;
+  -webkit-transition: transform 200ms linear, box-shadow 200ms linear, border-radius 200ms linear, outline 200ms linear;
+}
+
+.project{
+  width: 25vh;
+  height: 25vh;
 }
