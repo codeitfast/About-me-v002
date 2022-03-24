@@ -21,16 +21,18 @@
     </style>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="parallax.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   </head>
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    
+
     <div id = "welcome">
     
       <h1>Hello.<br/>
         I'm <a target = "_blank" href = "https://replit.com/@codeitfast" style = "text-decoration: none; color: white;">codeitfast.</a></h1>
-      <a class = "button" href = "#part1"><img src = "images/purple_button.svg" style = "width: 3rem; height: auto;"></a>
+      <a class = "button" href = "#" scrollto = "#target"><img src = "images/purple_button.svg" style = "width: 3rem; height: auto;"></a>
       <br/>
       <img id = "css" class = "codeImage" src = "images/css_test_v004.svg" style = "height: 30%; width: auto;">
       <img id = "html" class = "codeImage" src = "images/html_test_v003.svg" style = "height: 31%; width: auto;">
@@ -38,10 +40,13 @@
       <img id = "python" class = "codeImage" src = "images/python_test_v002.svg" style = "height: 30%; width: auto;">
     
     </div>
+
+    
     <hr class = "space">
     <div style="min-height: 100vh;"></div>
     <div class = "textBox" id = "part1">
-      <h1 id = "target">I'm a programer.</h1>
+      <hr class = "space" id = "target">
+      <h1>I'm a programer.</h1>
       <h3>Here are some projects I have made.</h3>
       
       <div class="projectWrapper">
@@ -56,43 +61,48 @@
       <img class = "project" src = "https://plchldr.co/i/336x280?&bg=ffffff&text=">
       </div>
       <br />
-      <div class="projectWrapper">
-      <img class = "project" src = "https://plchldr.co/i/336x280?&bg=ffffff&text=">
-      </div>
-      
-      <div class="projectWrapper">
-      <img class = "project" src = "https://plchldr.co/i/336x280?&bg=ffffff&text=" >
-      </div>
-      
-      <div class="projectWrapper">
-      <img class = "project" src = "https://plchldr.co/i/336x280?&bg=ffffff&text=">
-      </div><br />
-      <div class="projectWrapper">
-      <img class = "project" src = "https://plchldr.co/i/336x280?&bg=ffffff&text=">
-      </div>
-      
-      <div class="projectWrapper">
-      <img class = "project" src = "https://plchldr.co/i/336x280?&bg=ffffff&text=" >
-      </div>
-      
-      <div class="projectWrapper">
-      <img class = "project" src = "https://plchldr.co/i/336x280?&bg=ffffff&text=">
-      </div>
-
+      <br />
+      <br />
+      <br />
+      <a class = "button" scrollto = "#target2" style = "cursor: pointer;"><img src = "images/purple_button.svg" style = "width: 3rem; height: auto;"></a>
     </div>
+
+    <hr class = "space">
+    <div style="min-height: 100vh;"></div>
+    <div class = "textBox" id = "part2">
+    <hr class = "space" id = "target2">
+    <h1>I'm also a 3d artist.</h1>
+    <hr class = "space">
+    <div id = "render"></div>
+    <a class = "button" scrollto = "#target3" style = "cursor: pointer;"><img src = "images/purple_button.svg" style = "width: 3rem; height: auto;"></a>
+    </div>
+    <hr class = "space">
+    <div style = "min-height: 100vh;"></div>
+    <div class = "textBox" id = "part3">
+      <hr class = "space" id = "target3">
+      <h1>Want to contact me?</h1>
+      <a target = "_blank" href = "https://replit.com/@codeitfast"><img src = "replit.svg" style = "width: 20%; height: auto;" class = "link"></a><hr class = "space">
+      <a target = "_blank" href = "https://github.com/codeitfast"><img src = "github.svg" style = "width: 20%; height: auto;" class = "link"></a>
+      <hr class = "space">
+      <!-- TODO: Make discord server <a href = "https://" -->
+    </div>
+    
+    
 <script src="script.js"></script>
 
-    <script>
-      $('*').each((index, item) => {
-        if(item.hasAttribute('scrollto')) {
-          item.addEventListener('click', e => {
-            let y = $(window).scrollTop();
-            $('html, body').animate({
-              scrollTop: $(item.getAttribute('scrollto')).offset().top
-            }, 2000, "swing");
-          });
-        }
-      });
-    </script>
+<script>
+  $('*').each((index, item) => {
+    if(item.hasAttribute('scrollto')) {
+      item.addEventListener('click', e => {
+        let y = $(window).scrollTop();
+        $('html, body').animate({
+          scrollTop: $(item.getAttribute('scrollto')).offset().top
+        },{
+          duration: 1000,
+        })
+      })
+    }
+  });
+</script>
   </body>
 </html>
