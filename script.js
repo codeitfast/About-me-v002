@@ -77,3 +77,11 @@ function animate() {
 	renderer.render( scene, camera );
 }
 animate();
+
+window.addEventListener('resize', function(){
+  const width = window.innerWidth
+  const height = window.innerHeight
+  camera.aspect = width/height;
+  camera.updateProjectionMatrix()
+  renderer.setSize(width, height)
+})
