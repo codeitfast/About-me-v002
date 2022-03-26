@@ -111,7 +111,6 @@ body{
   background-size: cover;
 }
 
-
 .codeImage, h1{
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #8902CC, 0 0 40px #8902CC, 0 0 50px #8902CC, 0 0 60px #5900FF, 0 0 70px #5900FF;
 }
@@ -177,4 +176,8 @@ body{
     height: auto;
     background-attachment: scroll;
   } 
+}
+
+.link:hover{
+  background-size: calc(cover + 200px);
 }
